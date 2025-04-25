@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N5 <%= title%></title>
+    <link href="/assets/nav.css" rel="stylesheet" type="text/css">
+    <link href="/assets/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <%- include("./partials/nav.ejs")%>
+        
+    <h1 id="allblogs">All Blogs</h1>
+        
+    <% if(blogs.length > 0) { %>
+        <% blogs.forEach(blog => { %>
+            <div class="blogcard">
+            <a class="single" href="/blogs/<%= blog.id %>">
+                <div class= "bloggy bloginfo">
+                    <div class= "blogtitle">
+                        <h3 class = "title"><%= blog.title%></h3>
+                    </div>
+                </div>
+                <div class= "bloggy blogbody">
+                    <p class = "snippet"><%=blog.snippet%></p>
+                </div>
+            </a>
+            </div>
+            
+        <% }) %>
+
+    <% } else {%>
+
+        <p>There are no blogs to display...</p>
+    
+    <% } %>
+    
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N5 <%= title%></title>
+    <link href="/assets/nav.css" rel="stylesheet" type="text/css">
+    <link href="/assets/details.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <%- include("./partials/nav.ejs")%>     
+        <div class="wrapper">
+            <div class = "blogcard">
+                <h2 class="bloggy blogtitle"><%= blog.title %></h2>
+                <div class="bloggy blogbody">
+                    <p class="snippet"><%= blog.snippet %></p>
+                    <p class="body"><%= blog.body %></p>
+                </div>
+            </div>
+        <div class = "editwrapper">
+            <a class="editable update" href="/blogs/<%= blog._id %>/edit">edit</a> 
+            <a class="editable delete" data-doc="<%= blog._id %>">delete</a>
+        </div>
+                        
+        </div>
+
+    <script>
+        const trashcan = document.querySelector('a.delete');
+        trashcan.addEventListener('click', (e)=>{
+            const endpoint = `/blogs/${trashcan.dataset.doc}`;
+            
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+            .then((response) => response.json())
+            .then((data) => window.location.href = data.redirect)
+            .catch((err) => console.log(err));
+        });
+    </script>
+</body>
+</html>

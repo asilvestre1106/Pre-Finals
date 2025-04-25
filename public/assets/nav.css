@@ -1,0 +1,80 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    background-image: url('/assets/images/help.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: 10rem;
+    margin-right: 10rem; 
+    margin-top: 3rem; 
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    box-shadow: 2px 2px 2px black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* 
+.lgnreg{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+*/
+
+
+.site-title{
+    text-align: center;
+    margin-left: 10px;
+}
+
+.container{
+    display: flex;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.navbar, .acc{
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: rgb(138, 175, 255);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 25px;
+    margin: 3px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px black;
+}
+
+.navbar:hover{
+    background: rgb(184, 236, 234);
+}
+
+.navbar:active{
+    background: rgb(132, 170, 168);
+}
+
+.acc:hover{
+    background: rgb(184, 236, 234);
+}
+
+.acc:active{
+    background: rgb(132, 145, 170);
+}
+

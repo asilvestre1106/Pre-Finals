@@ -1,0 +1,49 @@
+.create-blog-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-blog-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+    margin-top: 3rem; 
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    box-shadow: 2px 2px 2px black;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.content input{
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+}
+
+.content textarea{
+    width: 500px;
+    height: 200px;
+    background-color: transparent;
+}
+
+#submit{
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+}
+
