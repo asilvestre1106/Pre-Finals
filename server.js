@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs')
 app.use(morgan('dev'));
 
-
+//test
 //Home Page
 app.get('/', (req, res)=>{
     res.redirect('/blogs');
